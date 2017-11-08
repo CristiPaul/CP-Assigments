@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int n , i,t,j;
+int n,i,aux,found;
 int a[30];
 
 int main()
@@ -15,29 +15,23 @@ int main()
         scanf ("%d",&a[i]);
     }
 
-   a[i]=a[1];
-   a[j]=a[n];
+   do
+   {
+        found = 0;
+        for (i=0;i<n-1;i++)
+            if (a[i]>a[i+1])
+            {   
+                aux=a[i];
+                a[i]=a[i+1];
+                a[i+1]=aux;
+                found=1;
+            }
+   }
+   while(found==1);
+    
+   for(i=0;i<n;i++)
+       prinft("%d ",a[i]);
 
-
-    while ((i < n/2)&&(j > n/2 ))
-    {
-           if (a[i] > a[j] )
-           {
-                t=a[i];
-                a[i]=a[j];
-                a[j]=a[i];
-                i++;
-           }
-           else
-           {
-               j--;
-           }
-
-
-    }
-
-    printf ("%d",a);
-
-
+ 
     return 0;
 }
