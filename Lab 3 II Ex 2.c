@@ -3,8 +3,8 @@
 
 int n ,i ,f[100];
 
-int fibo(int n , int f[100]){
-
+int fibo(int n , int f[100])
+{
     int i;
 
     for (i=1;i<=n;i++)
@@ -13,10 +13,6 @@ int fibo(int n , int f[100]){
         printf ("%f",f);
     }
 }
-
-
-
-
 
 int main()
 {
