@@ -27,12 +27,5 @@ int main()
 
     cout << "Procentul =" << procent << "%";
 
-
-
-
-
-
-
-
     return 0;
 }
